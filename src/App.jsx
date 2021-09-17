@@ -1,12 +1,15 @@
 import React from 'react'
-import { COLORS, SIZES } from './constants'
+import { COLORS, icons, SIZES } from './constants'
+import { Button } from './components'
+import TrendingUpIcon from '@mui/icons-material/TrendingUp'
+import EqualizerIcon from '@mui/icons-material/Equalizer'
+import AutoGraphIcon from '@mui/icons-material/AutoGraph'
 
 const App = () => {
   return (
     <div style={{ display: 'flex', padding: SIZES.padding, backgroundColor: COLORS.background }}>
       <div
         style={{
-          height: '100vh',
           width: '60%',
         }}>
         <h1>Main</h1>
@@ -67,38 +70,19 @@ const App = () => {
         <p>Body 1</p>
         <p className='p1'>Body 2</p>
         <p className='p2'>Body 3</p>
-        <div
-          style={{
-            borderRadius: SIZES.radius,
-            height: 50,
-            width: 50,
-            borderStyle: 'solid',
-            borderWidth: 1,
-            borderColor: COLORS.primary,
-          }}
-        />
-        <div
-          style={{
-            borderRadius: SIZES.radius,
-            height: 50,
-            width: 100,
-            borderStyle: 'solid',
-            borderWidth: 1,
-            borderColor: COLORS.primary,
-            marginTop: SIZES.padding,
-          }}
-        />
-        <div
-          style={{
-            borderRadius: SIZES.radius,
-            height: 50,
-            width: 150,
-            borderStyle: 'solid',
-            borderWidth: 1,
-            borderColor: COLORS.primary,
-            marginTop: SIZES.padding,
-          }}
-        />
+
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+          <Button>Primary</Button>
+          <Button variant='secondary'>Secondary</Button>
+          <Button variant='tertiary'>Tertiary</Button>
+          <Button variant='text'>Text</Button>
+          <Button startIcon={<TrendingUpIcon />}>With icon</Button>
+          <Button endIcon={<EqualizerIcon />}>With icon</Button>
+          <Button variant='icon'>
+            <AutoGraphIcon />
+          </Button>
+          <Button loading>Loading</Button>
+        </div>
       </div>
     </div>
   )

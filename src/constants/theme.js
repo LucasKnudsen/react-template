@@ -1,6 +1,8 @@
+import { createTheme } from '@mui/material/styles'
+
 export const COLORS = {
   primary: '#3b4cb8',
-  faded: '#d2d7f6',
+  faded: '#3b4cb8' + '20',
   secondary: '#3B3B3B',
   tertiary: '#f6f6f6',
   background: '#eeeeee',
@@ -10,10 +12,10 @@ export const COLORS = {
   gray: '#d9d9d9',
   gray1: '#8c8c8c',
   transparentWhite: 'rgba(255, 255, 255, 0.2)',
-  transparentBlack: 'rgba(0, 0, 0, 0.8)',
-  transparentBlack2: 'rgba(0, 0, 0, 0.4)',
+  transparentBlack: 'rgba(0, 0, 0, 0.4)',
+  transparentBlack2: 'rgba(0, 0, 0, 0.8)',
   dark: '#222222',
-  white: '#fff',
+  white: '#ffffff',
   black: '#000000',
   error: '#D84035',
 }
@@ -36,6 +38,20 @@ export const BREAKPOINTS = {
   isLargeScreen: '(min-width:1201px)',
 }
 
-const appTheme = { COLORS, SIZES, BREAKPOINTS, FONTS }
+export const muiTheme = createTheme({
+  palette: {
+    primary: {
+      main: COLORS.primary,
+    },
+    secondary: {
+      main: COLORS.secondary,
+    },
+    info: {
+      main: COLORS.white,
+    },
+  },
+})
+
+const appTheme = { COLORS, SIZES, BREAKPOINTS, FONTS, muiTheme }
 
 export default appTheme

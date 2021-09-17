@@ -1,4 +1,180 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+.custom-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 20px;
+  margin: 12px;
+  border-radius: 24px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.custom-button h4,
+.custom-button svg {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.custom-button .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom-button .start-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5px;
+}
+
+.custom-button .end-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5px;
+}
+
+.custom-button .button-loader {
+  position: absolute;
+}
+
+.custom-button.--primary {
+  background-color: #3b4cb8;
+}
+
+.custom-button.--primary h4 {
+  color: #fff;
+}
+
+.custom-button.--primary svg {
+  color: #fff;
+}
+
+.custom-button.--primary:hover {
+  background-color: #3b4cb820;
+}
+
+.custom-button.--primary:hover h4 {
+  color: #3b4cb8;
+}
+
+.custom-button.--primary:hover svg {
+  color: #3b4cb8;
+}
+
+.custom-button.--secondary {
+  border: 1px solid #3b4cb8;
+}
+
+.custom-button.--secondary h4 {
+  color: #3b4cb8;
+}
+
+.custom-button.--secondary:hover {
+  border: 1px solid #3b4cb820;
+  background-color: #3b4cb820;
+}
+
+.custom-button.--secondary:hover h4 {
+  color: #3b4cb8;
+}
+
+.custom-button.--secondary:hover svg {
+  color: #3b4cb8;
+}
+
+.custom-button.--tertiary {
+  background-color: #3b4cb820;
+  border: 1px solid #3b4cb820;
+}
+
+.custom-button.--tertiary h4 {
+  color: #3b4cb8;
+}
+
+.custom-button.--tertiary:hover {
+  border: 1px solid #3b4cb8;
+  background-color: #3b4cb8;
+}
+
+.custom-button.--tertiary:hover h4 {
+  color: #fff;
+}
+
+.custom-button.--tertiary:hover svg {
+  color: #fff;
+}
+
+.custom-button.--text {
+  border-radius: 0;
+}
+
+.custom-button.--text h4 {
+  color: #3b4cb8;
+}
+
+.custom-button.--text:hover {
+  -webkit-text-decoration: underline #3b4cb8;
+          text-decoration: underline #3b4cb8;
+}
+
+.custom-button.--icon {
+  padding: 10px;
+}
+
+.custom-button.--icon h4 {
+  color: #3b4cb8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom-button.--icon:hover {
+  background-color: #3b4cb820;
+}
+
+.custom-button:active {
+  -webkit-transform: scale(0.93);
+          transform: scale(0.93);
+}
+
 * {
   outline: 0;
   padding: 0;
