@@ -50,6 +50,9 @@ export const muiTheme = createTheme({
       main: COLORS.white,
     },
   },
+  typography: {
+    fontFamily: { ...FONTS.main },
+  },
 })
 
 const appTheme = { COLORS, SIZES, BREAKPOINTS, FONTS, muiTheme }

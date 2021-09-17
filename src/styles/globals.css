@@ -175,6 +175,44 @@
           transform: scale(0.93);
 }
 
+.custom-input:focus-within .custom-icon {
+  -webkit-filter: invert(20%) sepia(97%) saturate(2278%) hue-rotate(228deg) brightness(84%) contrast(79%);
+          filter: invert(20%) sepia(97%) saturate(2278%) hue-rotate(228deg) brightness(84%) contrast(79%);
+}
+
+.custom-input:focus-within svg {
+  color: #3b4cb8;
+}
+
+.custom-input.--rounded .MuiOutlinedInput-root {
+  padding: 0;
+}
+
+.custom-input.--rounded fieldset {
+  border-radius: 48px;
+}
+
+.custom-input.--rounded .custom-icon-container {
+  background-color: #f3f3f3;
+  border-radius: 48px;
+  height: 56px;
+  width: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom-input.--rounded .custom-icon-container .custom-icon {
+  height: 20px;
+  width: 20px;
+}
+
 * {
   outline: 0;
   padding: 0;

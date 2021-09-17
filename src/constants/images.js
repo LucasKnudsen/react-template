@@ -1,5 +1,5 @@
-const logo = require('../assets/images/logo.png')
-const uniLogo = require('../assets/images/uniLogo.jpg')
-const bacco = require('../assets/images/bacco.png')
+const logo = import('../assets/images/logo.png')
+const uniLogo = import('../assets/images/uniLogo.jpg')
+const bacco = import('../assets/images/bacco.png')
 
 export default { logo, uniLogo, bacco }
