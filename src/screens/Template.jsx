@@ -4,6 +4,7 @@ import EqualizerIcon from '@mui/icons-material/Equalizer'
 import AutoGraphIcon from '@mui/icons-material/AutoGraph'
 import AccountCircle from '@mui/icons-material/AccountCircle'
 import Visibility from '@mui/icons-material/Visibility'
+import toast from 'react-hot-toast'
 
 import { COLORS, icons, SIZES } from '../constants'
 import { Button, InputField } from '../components'
@@ -75,10 +76,23 @@ const Template = () => {
         <p className='p2'>Body 3</p>
 
         <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-          <Button>Primary</Button>
-          <Button variant='secondary'>Secondary</Button>
-          <Button variant='tertiary'>Tertiary</Button>
-          <Button variant='text'>Text</Button>
+          <Button onClick={() => toast('Normal')}>Primary</Button>
+          <Button onClick={() => toast.success('Well done!')} variant='secondary'>
+            Secondary
+          </Button>
+          <Button onClick={() => toast.error('Nope!')} variant='tertiary'>
+            Tertiary
+          </Button>
+          <Button
+            onClick={() => {
+              toast.loading('Loader...', { id: 'loader' })
+              setTimeout(() => {
+                toast.success('Done!', { id: 'loader' })
+              }, 1500)
+            }}
+            variant='text'>
+            Text
+          </Button>
           <Button startIcon={<TrendingUpIcon />}>With icon</Button>
           <Button endIcon={<EqualizerIcon />}>With icon</Button>
           <Button variant='icon'>

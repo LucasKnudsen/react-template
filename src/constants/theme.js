@@ -55,6 +55,13 @@ export const muiTheme = createTheme({
   },
 })
 
-const appTheme = { COLORS, SIZES, BREAKPOINTS, FONTS, muiTheme }
+export const toastOptions = {
+  style: {
+    fontFamily: { ...FONTS.main },
+    minWidth: 200,
+  },
+}
+
+const appTheme = { COLORS, SIZES, BREAKPOINTS, FONTS, muiTheme, toastOptions }
 
 export default appTheme
