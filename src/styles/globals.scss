@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import './variables';
+
+* {
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding: 5px;
+}
+
+h1 {
+  font-family: $accentFont;
+  color: $dark;
+  font-size: 30px;
+  line-height: 50px;
+  &.large {
+    font-size: 40px;
+  }
+}
+h2 {
+  font-family: $mainFont;
+  color: $dark;
+  font-size: 24px;
+  line-height: 40px;
+}
+h3 {
+  font-family: $mainFont;
+  color: $dark;
+  font-size: 18px;
+  line-height: 36px;
+}
+h4 {
+  font-family: $mainFont;
+  color: $dark;
+  font-size: 16px;
+  line-height: 36px;
+}
+h5 {
+  font-family: $mainFont;
+  color: $dark;
+  font-size: 14px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+p {
+  font-family: $mainFont;
+  color: $dark;
+  font-size: 16px;
+  line-height: 26px;
+
+  &.p1 {
+    font-size: 18px;
+  }
+  &.p2 {
+    font-size: 20px;
+  }
+}
