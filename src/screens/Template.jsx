@@ -95,7 +95,7 @@ const Template = () => {
           </Button>
           <Button startIcon={<TrendingUpIcon />}>With icon</Button>
           <Button endIcon={<EqualizerIcon />}>With icon</Button>
-          <Button variant='icon'>
+          <Button mode='icon' variant='clean'>
             <AutoGraphIcon />
           </Button>
           <Button loading>Loading</Button>

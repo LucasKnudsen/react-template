@@ -1,14 +1,14 @@
 import React from 'react'
-import Template from './screens/Template'
 import { Toaster } from 'react-hot-toast'
 import { toastOptions } from './constants'
+import Routes from './navigation/Routes'
 
 const App = () => {
   return (
-    <div>
-      <Template />
+    <>
+      <Routes />
       <Toaster toastOptions={toastOptions} />
-    </div>
+    </>
   )
 }
 

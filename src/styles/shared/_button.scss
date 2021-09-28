@@ -5,13 +5,18 @@
   justify-content: center;
   align-items: center;
   padding: 5px 20px;
-  margin: $padding;
   border-radius: $radius;
   cursor: pointer;
   transition: 0.2s ease;
+  position: relative;
+
+  h4 {
+    font-size: 14px;
+  }
 
   h4,
-  svg {
+  svg,
+  img {
     transition: 0.2s ease;
   }
 
@@ -36,49 +41,67 @@
     margin-left: 5px;
   }
 
+  .custom-icon {
+    height: 25px;
+    width: 25px;
+  }
+
   .button-loader {
     position: absolute;
   }
 
+  &:active {
+    transform: scale(0.93);
+  }
+
+  // PRIMARY
   &.--primary {
     background-color: $primary;
-    h4 {
-      color: $white;
-    }
+    h4,
     svg {
       color: $white;
     }
 
+    img {
+      filter: $whiteTint;
+    }
+
     &:hover {
       background-color: $faded;
-      h4 {
-        color: $primary;
-      }
+      h4,
       svg {
         color: $primary;
+      }
+      img {
+        filter: $primaryTint;
       }
     }
   }
 
+  // SECONDARY
   &.--secondary {
     border: 1px solid $primary;
+    background-color: $white;
+
     h4 {
       color: $primary;
+    }
+    img {
+      filter: $primaryTint;
     }
 
     &:hover {
       border: 1px solid $faded;
 
       background-color: $faded;
-      h4 {
-        color: $primary;
-      }
+      h4,
       svg {
         color: $primary;
       }
     }
   }
 
+  // TERTIARY
   &.--tertiary {
     background-color: $faded;
     border: 1px solid $faded;
@@ -91,17 +114,20 @@
       border: 1px solid $primary;
 
       background-color: $primary;
-      h4 {
-        color: $white;
-      }
+      h4,
       svg {
         color: $white;
+      }
+      img {
+        filter: $whiteTint;
       }
     }
   }
 
+  // PURE TEXT
   &.--text {
     border-radius: 0;
+    background-color: transparent;
     h4 {
       color: $primary;
     }
@@ -109,23 +135,66 @@
     &:hover {
       text-decoration: underline $primary;
     }
+    &:active {
+      transform: scale(1);
+    }
   }
 
-  &.--icon {
-    padding: 10px;
+  // CLEAN
+  &.--clean {
+    border-radius: 0;
+    background-color: transparent;
     h4 {
       color: $primary;
+    }
+
+    &:hover {
+      background-color: $tertiary;
+    }
+  }
+
+  // ONLY ICON
+  &.--icon {
+    padding: 5px;
+    margin: 5px;
+    border-radius: $radius * 2;
+
+    h4 {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    &:hover {
-      background-color: $faded;
+    &:active {
+      transform: scale(0.9);
     }
   }
+}
 
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $faded;
+  }
   &:active {
-    transform: scale(0.93);
+    transform: scale(0.9);
+  }
+}
+
+.update-button {
+  display: inline-flex;
+  &:hover {
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+  &.synching {
+    svg {
+      animation: spinning infinite 1s linear;
+    }
   }
 }

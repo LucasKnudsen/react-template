@@ -1,22 +1,23 @@
 @import '../variables';
 
 .custom-input {
-  // fieldset {
-  //   border-color: $primary;
-  // }
+  input,
+  textarea {
+    font-size: $baseFontSize;
+  }
 
-  .MuiOutlinedInput-root {
-    &:hover {
-      // fieldset {
-      //   border-color: $primary;
-      // }
+  svg,
+  .custom-icon {
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.9);
     }
   }
 
   &:focus-within {
     .custom-icon {
-      filter: invert(20%) sepia(97%) saturate(2278%) hue-rotate(228deg) brightness(84%)
-        contrast(79%);
+      filter: $primaryTint;
     }
     svg {
       color: $primary;
@@ -25,10 +26,16 @@
 
   &.--rounded {
     .MuiOutlinedInput-root {
-      padding: 0;
+      padding-left: 0;
     }
     fieldset {
       border-radius: $radius * 2;
+      border-color: $primary;
+    }
+
+    input::placeholder {
+      font-style: italic;
+      color: $primary;
     }
 
     .custom-icon-container {
@@ -45,5 +52,11 @@
         width: 20px;
       }
     }
+  }
+}
+
+.date-picker {
+  input {
+    flex: 1;
   }
 }

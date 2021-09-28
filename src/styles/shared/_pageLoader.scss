@@ -1,0 +1,21 @@
+@import '../variables';
+
+.page-loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  h4 {
+    margin-top: $padding;
+    font-size: 13px;
+  }
+
+  &.modal-loader {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}

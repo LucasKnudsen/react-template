@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
-@import './variables';
-@import './shared/button', './shared/inputField';
+@import './variables', './standards', './keyframes';
+@import './shared/button', './shared/inputField', './shared/pageLoader';
 
 * {
   outline: 0;
@@ -15,12 +15,7 @@ a {
   text-decoration: none;
 }
 
-body {
-  padding: 5px;
-}
-
 h1 {
-  font-family: $accentFont;
   color: $dark;
   font-size: 30px;
   line-height: 50px;
@@ -29,40 +24,48 @@ h1 {
   }
 }
 h2 {
-  font-family: $mainFont;
   color: $dark;
   font-size: 24px;
-  line-height: 40px;
+  line-height: 36px;
 }
 h3 {
-  font-family: $mainFont;
   color: $dark;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 30px;
 }
 h4 {
-  font-family: $mainFont;
   color: $dark;
   font-size: 16px;
-  line-height: 36px;
+  line-height: 28px;
 }
 h5 {
-  font-family: $mainFont;
   color: $dark;
   font-size: 14px;
-  line-height: 36px;
+  line-height: 28px;
+}
+h6 {
+  color: $dark;
+  font-size: 14px;
+  line-height: 28px;
   text-transform: uppercase;
 }
 p {
-  font-family: $mainFont;
   color: $dark;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 24px;
 
   &.p1 {
     font-size: 18px;
   }
   &.p2 {
     font-size: 20px;
+  }
+  &.light {
+    font-size: 16px;
+    font-weight: 200;
+  }
+  &.italic {
+    font-size: 16px;
+    font-style: italic;
   }
 }
