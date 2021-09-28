@@ -1,6 +1,7 @@
 import theme, { COLORS, SIZES, FONTS, muiTheme, toastOptions } from './theme'
 import { dummyData } from './dummy'
-import images from './images'
-import icons from './icons'
+import * as images from './images'
+import * as icons from './icons'
+import * as data from './data'
 
-export { theme, COLORS, SIZES, dummyData, images, icons, FONTS, muiTheme, toastOptions }
+export { theme, COLORS, SIZES, dummyData, data, images, icons, FONTS, muiTheme, toastOptions }

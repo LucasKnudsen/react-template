@@ -6,8 +6,8 @@ import AccountCircle from '@mui/icons-material/AccountCircle'
 import Visibility from '@mui/icons-material/Visibility'
 import toast from 'react-hot-toast'
 
-import { COLORS, icons, SIZES } from '../constants'
-import { Button, InputField } from '../components'
+import { COLORS, data, icons, images, SIZES } from '../constants'
+import { Button, CustomLottie, InputField } from '../components'
 
 const Template = () => {
   return (
@@ -110,11 +110,13 @@ const Template = () => {
             placeholder='Rounded custom'
             startIcon={
               <div className='custom-icon-container'>
-                <img className='custom-icon' src={icons.account} />{' '}
+                <img className='custom-icon' src={icons.close} />{' '}
               </div>
             }
           />
         </div>
+
+        <CustomLottie animationData={data.animation1} />
       </div>
     </div>
   )
