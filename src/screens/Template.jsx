@@ -8,6 +8,7 @@ import toast from 'react-hot-toast'
 
 import { COLORS, data, icons, images, SIZES } from '../constants'
 import { Button, CustomLottie, InputField } from '../components'
+import { ReactSVG } from 'react-svg'
 
 const Template = () => {
   return (
